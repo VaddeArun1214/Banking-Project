@@ -1,0 +1,11 @@
+Connected the ingestion pipeline from Day 1 to Azure Cosmos DB for processed data storage.
+
+Built the Queue-Triggered Python Azure Function to read messages from Service Bus and load corresponding files from ADLS.
+
+Implemented schema validation, row-level quality checks, and duplicate transaction removal inside the function.
+
+Added logic to classify transaction types such as ATM, UPI, based on file metadata.
+
+Developed rule-based checks to detect suspicious patterns (e.g., rapid withdrawals, repeated failed UPI attempts).
+
+Successfully wrote validated and enriched records into Cosmos DB containers: ATMTransactions, UPIEvents, and FraudAlerts.
